@@ -1,0 +1,53 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Generative modeling}{5}{section*.8}%
+\contentsline {subsection}{\numberline {2.1.1}Theoretical formulation}{5}{section*.9}%
+\contentsline {subsection}{\numberline {2.1.2}Sampling from an estimated distribution}{7}{section*.11}%
+\contentsline {section}{\numberline {2.2}Diffusion models}{8}{section*.12}%
+\contentsline {subsection}{\numberline {2.2.1}Langevin diffusion}{9}{section*.13}%
+\contentsline {subsection}{\numberline {2.2.2}Score matching}{9}{section*.14}%
+\contentsline {subsection}{\numberline {2.2.3}Injecting more noise}{11}{section*.16}%
+\contentsline {subsection}{\numberline {2.2.4}Diffusion process}{12}{section*.17}%
+\contentsline {section}{\numberline {2.3}Expressivity of a generative model}{15}{section*.19}%
+\contentsline {subsection}{\numberline {2.3.1}Precision and recall as f-divergences}{16}{section*.20}%
+\contentsline {subsection}{\numberline {2.3.2}Using the theory of diffusion as a refinement process}{16}{section*.21}%
+\contentsline {subsection}{\numberline {2.3.3}Fine-tuning methods}{18}{section*.22}%
+\contentsline {section}{\numberline {2.4}Conclusion}{20}{section*.23}%
+\contentsline {chapter}{\numberline {3}Discriminator guidance}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Discriminator guidance}{21}{section*.25}%
+\contentsline {subsection}{\numberline {3.1.1}Derivation}{22}{section*.26}%
+\contentsline {subsection}{\numberline {3.1.2}f-divergence between the target and refined distribution}{23}{section*.27}%
+\contentsline {subsection}{\numberline {3.1.3}Training the discriminator}{24}{section*.29}%
+\contentsline {section}{\numberline {3.2}Sub-optimality of cross entropy minimization}{24}{section*.30}%
+\contentsline {section}{\numberline {3.3}Improving the refinement process}{26}{section*.31}%
+\contentsline {subsection}{\numberline {3.3.1}Denoising score matching loss}{26}{section*.32}%
+\contentsline {subsection}{\numberline {3.3.2}Practical considerations}{27}{section*.35}%
+\contentsline {section}{\numberline {3.4}Experiments}{28}{section*.36}%
+\contentsline {subsection}{\numberline {3.4.1}Toy example}{28}{section*.37}%
+\contentsline {subsection}{\numberline {3.4.2}Image generation}{29}{section*.40}%
+\contentsline {subsection}{\numberline {3.4.3}Comments on the results}{30}{section*.42}%
+\contentsline {section}{\numberline {3.5}Conclusion}{31}{section*.43}%
+\contentsline {chapter}{\numberline {4}Reinforcement Learning based methods}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Restart sampling}{33}{section*.45}%
+\contentsline {subsection}{\numberline {4.1.1}Trade-off between speed and quality}{33}{section*.46}%
+\contentsline {subsection}{\numberline {4.1.2}Sampling with ODE solvers vs SDE solvers}{34}{section*.48}%
+\contentsline {subsection}{\numberline {4.1.3}Solving back and forth}{35}{section*.49}%
+\contentsline {section}{\numberline {4.2}Reinforcement Learning }{36}{section*.50}%
+\contentsline {subsection}{\numberline {4.2.1}Background}{36}{section*.51}%
+\contentsline {subsection}{\numberline {4.2.2}Matching state visitation distributions}{37}{section*.52}%
+\contentsline {subsection}{\numberline {4.2.3}f-Policy gradient}{38}{section*.53}%
+\contentsline {section}{\numberline {4.3}Application to diffusion models}{38}{section*.54}%
+\contentsline {subsection}{\numberline {4.3.1}Formalizing the restart sampling problem as a reinforcement learning problem}{38}{section*.55}%
+\contentsline {subsection}{\numberline {4.3.2}f-Restart sampling}{40}{section*.56}%
+\contentsline {subsection}{\numberline {4.3.3}Experiments and results}{41}{section*.57}%
+\contentsline {section}{\numberline {4.4}Conclusion}{42}{section*.59}%
+\contentsline {chapter}{\numberline {5}Conclusion}{43}{chapter.5}%
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.61}%
+\contentsline {subsection}{\numberline {5.0.1}Assumptions}{52}{section*.64}%
+\contentsline {subsection}{\numberline {5.0.2}Proof of Theorem \ref {theorem:exploding_kl}}{53}{section*.65}%
+\contentsline {subsubsection}{Finding a problematic case}{53}{equation.5.0.2}%
+\contentsline {subsubsection}{Computing the gain}{56}{equation.5.0.19}%
+\contentsline {subsection}{\numberline {5.0.3}Computing the gain}{57}{section*.66}%
+\contentsline {subsection}{\numberline {5.0.4}Proof of Theorem~\ref {theorem:expectation_exploding}}{58}{section*.68}%
+\contentsline {subsection}{\numberline {5.0.5}Proof of Proposition~\ref {theorem:optimality_mse_sm}}{62}{section*.69}%

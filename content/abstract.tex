@@ -1,0 +1,13 @@
+% !TEX root = ../thesis-example.tex
+%
+\pdfbookmark[0]{Abstract}{Abstract}
+\chapter*{Abstract}\label{sec:abstract}
+\vspace*{-10mm}
+This thesis work presents two methods in refining the generation of generative models, particularly diffusion models.
+Popular generative models typically contain billions of parameters. They incur a hefty training cost, in both energy and time, and the architecture choice often restrict the estimation to have a suboptimal estimation of the target distribution.
+\\
+As a result, we are interested in ways to boost generative models with smaller models, in order to mitigate generation errors, due to either estimation or sampling. Focusing our work on diffusion models, we thus propose two methods : improved discriminator guidance, which consists in using a discriminator to correct the estimation error, and f-Policy gradient, which circumvents the errors induced by solving the backward SDE of a diffusion process by using reinforcement learning and dense signals provided by measuring the f-divergence between the two distributions.
+\\ 
+We provide theoretical guarantees proving the validity of our methods and demonstrate their effectiveness on standard benchmark datasets. Our experiments show that boosting improves the generation process without incurring a substantial cost that would otherwise be obtained by fine-tuning the model.
+\vspace*{20mm}
+

@@ -1,0 +1,135 @@
+\ProvidesPackage{notation}
+\usepackage{xspace}
+\usepackage{scalerel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{MnSymbol}
+\usepackage{dsfont}
+\usepackage[many]{tcolorbox}
+\usepackage{multirow}
+
+% Divergences
+\newcommand{\fdiv}{$f$-divergence\xspace}
+\newcommand{\fdivs}{$f$-divergences\xspace}
+\newcommand{\KL}{\mathcal{D}_{\mathrm{KL}}}
+\newcommand{\GAN}{\mathcal{D}_{\mathrm{GAN}}}
+\newcommand{\rKL}{\mathcal{D}_{\mathrm{rKL}}}
+\newcommand{\He}{\mathcal{D}_{\mathrm{He}}}
+\newcommand{\DD}{D}
+\newcommand{\JS}{\mathcal{D}_{\mathrm{JS}}}
+\newcommand{\Je}{\mathcal{D}_{\mathrm{Je}}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Df}{\mathcal{D}_f}
+\newcommand{\Dg}{\mathcal{D}_g}
+\newcommand{\Da}{\mathcal{D}_\alpha}
+\newcommand{\DaA}{\mathcal{D}_\alpha^{\mathrm{A}}}
+\newcommand{\DaR}{\mathcal{D}_\alpha^{\mathrm{R}}}
+\newcommand{\DaRinf}{\mathcal{D}_\infty^{\mathrm{R}}}
+\newcommand{\DaT}{\mathcal{D}_\alpha^{\mathrm{T}}}
+\newcommand{\Dchi}{\mathcal{D}_{\chi^2}}
+\newcommand{\TV}{\mathcal{D}_{\mathrm{TV}}}
+\newcommand{\fullDPR}[1]{\D_{#1{\scaleto{\mbox -\mathrm{PR}}{0.7ex}}}}
+\newcommand{\DPR}{\fullDPR{\lambda}}
+\newcommand{\DRP}{\fullDPR{1/\lambda}}
+%\newcommand{\DPR}{\D_{\lambda{\scaleto{\mbox -\mathrm{PR}}{0.7ex}}}}
+%\newcommand{\DRP}{\D^{\mathrm{PR}}_ {1/\lambda}}
+\newcommand{\Dprim}{\mathcal{D}_{f,T}^{\mathrm{primal}}}
+\newcommand{\Dprimal}{\mathcal{D}_{f,T}^{\mathrm{primal}}(P\Vert \whP)}
+\newcommand{\Ddu}{\mathcal{D}^{\mathrm{dual}}}
+\newcommand{\Ddual}{\Ddu_{f,T}(P\Vert \whP)}
+
+% Sets
+\newcommand{\Gset}{\mathcal{G}}
+\newcommand{\setG}{\mathcal{G}}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Nset}{\mathbb{N}}
+\newcommand{\Zset}{\mathbb{Z}}
+\newcommand{\Cset}{\mathcal{C}}
+\newcommand{\Xset}{\mathcal{X}}
+\newcommand{\setX}{\mathcal{X}}
+\newcommand{\Yset}{\mathcal{Y}}
+\newcommand{\ZZset}{\mathcal{Z}}
+\newcommand{\Mset}{\mathcal{M}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\setP}{\mathcal{P}}
+\newcommand{\setT}{\mathcal{T}}
+\newcommand{\setZ}{\mathcal{Z}}
+\newcommand{\Aset}{\mathcal{A}}
+\newcommand{\Bset}{\mathcal{B}}
+
+\newcommand{\whcP}{\widehat{\setP}}
+
+\newcommand{\calL}{\mathcal{L}}
+% Vectors
+\newcommand{\vx}{\boldsymbol{x}}
+\newcommand{\vs}{\boldsymbol{s}}
+\newcommand{\vy}{\boldsymbol{y}}
+\newcommand{\vzero}{\boldsymbol{0}}
+\newcommand{\vz}{\boldsymbol{z}}
+\newcommand{\vp}{\boldsymbol{p}}
+\newcommand{\vf}{\boldsymbol{f}}
+\newcommand{\vmu}{\boldsymbol{\mu}}
+\newcommand{\vlambda}{\boldsymbol{\lambda}}
+\newcommand{\va}{\boldsymbol{a}}
+\newcommand{\vb}{\boldsymbol{b}}
+\newcommand{\vc}{\boldsymbol{c}}
+\newcommand{\vu}{\boldsymbol{u}}
+\newcommand{\vv}{\boldsymbol{v}}
+\newcommand{\vw}{\boldsymbol{w}}
+\newcommand{\mI}{\mathbf{I}}
+\newcommand{\mA}{\mathbf{A}}
+\newcommand{\mB}{\mathbf{B}}
+\newcommand{\mC}{\mathbf{C}}
+\newcommand{\msigma}{\boldsymbol{\Sigma}}
+
+% Operators
+\newcommand{\vol}[1]{\mathrm{vol}\left(#1\right)}
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\Tr}{\mathrm{Tr}}
+
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\PR}{\mathrm{PR}}
+\newcommand{\PRd}{\mathrm{PRD}}
+\newcommand{\Lip}{\mathrm{Lip}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\Q}{\mathrm{Q}}
+\newcommand{\ind}[1]{\mathds{1}_{\left\{#1\right\}}}
+\newcommand{\IS}{\mathrm{IS}}
+\newcommand{\FID}{\mathrm{FID}}
+% Probabilities
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\dx}{\d \vx}
+\newcommand{\dt}{\d t}
+\newcommand{\dw}{\d \vw}
+% \newcommand{\vd}{\boldsymbol{\mathrm{d}}}
+\newcommand{\vd}{d}
+\newcommand{\wh}{\widehat}
+\newcommand{\whP}{\widehat P}
+\newcommand{\whQ}{\widehat Q}
+\newcommand{\whp}{\widehat p}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wtP}{\widetilde P}
+\newcommand{\wtp}{\widetilde p}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\EE}[2]{\mathbb{E}_{#1}\left[#2 \right]}
+\renewcommand{\P}{\mathbb{P}}
+% Others
+\newcommand{\Topt}{T^{\mathrm{opt}}}
+\newcommand{\opt}{{\mathrm{opt}}}
+\newcommand{\Dopt}{D^{\mathrm{opt}}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\s}{^*}
+\newcommand{\et}{\quad \mbox{and} \quad }
+\newcommand{\si}{\mbox{if }}
+\newcommand{\breg}{\mathrm{Breg}}
+\DeclareMathOperator*{\argmin}{argmin} 
+\DeclareMathOperator*{\argmax}{argmax} 
+
+\newenvironment{hproof}{%
+  \renewcommand{\proofname}{Sketch of Proof}\proof}{\endproof}

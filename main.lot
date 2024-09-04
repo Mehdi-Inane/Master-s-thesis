@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Generic Mathematical Expressions for Statistical Divergences}}{7}{table.caption.10}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Specific design choices employed by different model families}}{15}{table.caption.18}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Discriminator-adjusted score error $E_{\infty , \phi }$ and corresponding refinement value \citep {kim2023refininggenerativeprocessdiscriminator}.}}{24}{table.caption.28}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Comparison of the proposed method with the method of \citet {kim2023refininggenerativeprocessdiscriminator} on CIFAR-10, FFHQ and AFHQv2. We give metrics averaged on 3 trainings procedure with one standard deviation.}}{30}{table.caption.41}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

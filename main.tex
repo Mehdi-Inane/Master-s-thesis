@@ -1,0 +1,184 @@
+\RequirePackage{silence}
+\WarningFilter{titlesec}{Non standard sectioning command}
+\WarningFilter{scrreprt}{Usage of package}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+	paper=A4,					% paper size --> A4 is default in Germany
+	twoside=true,				% onesite or twoside printing
+	openright,					% doublepage cleaning ends up right side
+	parskip=full,				% spacing value / method for paragraphs
+	chapterprefix=true,			% prefix for chapter marks
+	11pt,						% font size
+	headings=normal,			% size of headings
+	bibliography=totoc,			% include bib in toc
+	listof=totoc,				% include listof entries in toc
+	titlepage=on,				% own page for each title page
+	captions=tableabove,		% display table captions above the float env
+	draft=false,				% value for draft version
+]{scrreprt}%
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Boosting methods for refining diffusion models}
+\newcommand{\thesisName}{Ahmed Mehdi Inane}
+\newcommand{\thesisSubject}{Master's thesis}
+\newcommand{\thesisDate}{August 28, 2024}
+\newcommand{\thesisVersion}{Reviewer's version}
+
+\newcommand{\thesisFirstReviewer}{Etienne Decencière}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{Ecole des Mines de Paris,PSL}}
+\newcommand{\thesisFirstReviewerDepartment}{Centre de morphologie mathématique}
+
+\newcommand{\thesisSecondReviewer}{Gabriel Peyr\'e}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{Ecole Normale Supérieure}}
+\newcommand{\thesisSecondReviewerDepartment}{Département de Mathématiques et Applications}
+
+\newcommand{\thesisFirstSupervisor}{Alexandre V\'erine}
+\newcommand{\thesisSecondSupervisor}{Yann Chevaleyre}
+
+\newcommand{\thesisUniversity}{\protect{Universit\'e Paris-Dauphine}}
+\newcommand{\thesisUniversityDepartment}{LAMSADE}
+\newcommand{\thesisUniversityGroup}{Machine Intelligence and Learning Systems (MILES)}
+\newcommand{\thesisUniversityCity}{Paris}
+\newcommand{\thesisUniversityStreetAddress}{Place du Maréchal de Lattre de Tassigny}
+\newcommand{\thesisUniversityPostalCode}{75016}
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\usepackage[					% clean thesis style
+	figuresep=colon,%
+	sansserif=false,%
+	hangfigurecaption=false,%
+	hangsection=true,%
+	hangsubsection=true,%
+	colorize=full,%
+	colortheme=bluemagenta,%
+% LLT: Use biber if using UTF8 encoding
+ 	bibsys=bibtex,%
+%	bibsys=biber,%
+	bibfile=bib-refs,%
+	bibstyle=alphabetic,%
+]{cleanthesis}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array} 
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\hypersetup{					% setup the hyperref-package options
+	pdftitle={\thesisTitle},	% 	- title (PDF meta)
+	pdfsubject={\thesisSubject},% 	- subject (PDF meta)
+	pdfauthor={\thesisName},	% 	- author (PDF meta)
+	plainpages=false,			% 	-
+	colorlinks=false,			% 	- colorize links?
+	pdfborder={0 0 0},			% 	-
+	breaklinks=true,			% 	- allow line break inside links
+	bookmarksnumbered=true,		%
+	bookmarksopen=true			%
+}
+
+\usepackage{notation}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
+\begin{document}
+
+\newtheoremstyle{myassumption} % Name of the style
+  {3pt} % Space above
+  {3pt} % Space below
+  {\itshape} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning ‘normal’)
+
+% Applying the style to the 'assumption' environment
+\theoremstyle{myassumption}
+\newtheorem{assumption}{Assumption}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+% --------------------------
+% rename document parts
+% --------------------------
+%\renewcaptionname{ngerman}{\figurename}{Abb.}
+%\renewcaptionname{ngerman}{\tablename}{Tab.}
+\renewcaptionname{english}{\figurename}{Fig.}
+\renewcaptionname{english}{\tablename}{Tab.}
+
+% --------------------------
+% Front matter
+% --------------------------
+\pagenumbering{roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{content/titlepages}		% INCLUDE: all titlepages
+\cleardoublepage
+
+\pagestyle{plain}				% display just page numbers
+\input{content/abstract}		% INCLUDE: the abstracts (english and german)
+\cleardoublepage
+%
+\input{content/acknowledgement} % INCLUDE: acknowledgement
+\cleardoublepage
+%
+\setcounter{tocdepth}{2}		% define depth of toc
+\tableofcontents				% display table of contents
+\cleardoublepage
+
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}			% arabic page numbering
+\setcounter{page}{1}			% set page counter
+\pagestyle{maincontentstyle} 	% fancy header and footer
+
+\input{content/chapter-introduction} % INCLUDE: introduction
+\input{content/chapter-related-work} % INCLUDE: related work
+\input{content/chapter-dg}	% INCLUDE: system
+\input{content/chapter-rl} % INCLUDE: concepts
+\input{content/chapter-conclusion} % INCLUDE: conclusion
+\cleardoublepage
+%\bibliography{bib-refs}
+% --------------------------
+% Back matter
+% --------------------------
+{%
+\setstretch{1.1}
+\renewcommand{\bibfont}{\normalfont\small}
+\setlength{\biblabelsep}{0pt}
+\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+\printbibliography[nottype=online]
+% \printbibliography[heading=subbibliography,title={Webseiten}]
+}
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+\input{content/colophon}
+\cleardoublepage
+
+% **************************************************
+% End of Document CONTENT
+% **************************************************
+\end{document}
